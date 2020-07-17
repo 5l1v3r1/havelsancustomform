@@ -1,0 +1,16 @@
+
+<form [formGroup]="form">
+    <text-field formControlName="name">
+        İsim :
+    </text-field>
+
+    <text-field formControlName="address">
+        Adres :
+    </text-field>
+
+    <button class="btn btn-xs btn-success" [disabled]="form.invalid || form.disabled">
+        Kaydet
+    </button>
+</form>
+
+{{form.value | json}}
